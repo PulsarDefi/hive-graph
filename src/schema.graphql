@@ -206,7 +206,7 @@ scalar JSON
 type LastCommit {
   block_id: BlockId!
   height: String!
-  round: String!
+  round: Float!
   signatures: [Signature!]!
 }
 

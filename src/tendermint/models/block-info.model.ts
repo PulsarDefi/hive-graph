@@ -27,7 +27,7 @@ export class BlockData {
 @ObjectType()
 export class Evidence {
   @Field(() => String, { nullable: true })
-  evidence!: string | null
+  evidence!: string[] | null
 }
 
 @ObjectType()
@@ -90,7 +90,7 @@ export class LastCommit {
   height!: string
 
   @Field()
-  round!: string
+  round!: number
 
   @Field(() => BlockId)
   block_id!: BlockId
