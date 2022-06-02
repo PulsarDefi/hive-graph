@@ -1,5 +1,5 @@
 import { ObjectType, Field } from '@nestjs/graphql'
-import { Coins as TerraCoins } from 'nestjs-terra'
+import { Coins as TerraCoins } from '@pulsardefi/nestjs-terra'
 import { ProposalContent } from '../interfaces'
 import { Coin } from '../models'
 

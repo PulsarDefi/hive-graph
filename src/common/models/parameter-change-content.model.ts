@@ -1,5 +1,5 @@
 import { ObjectType, Field } from '@nestjs/graphql'
-import { ParamChanges } from 'nestjs-terra'
+import { ParamChanges } from '@pulsardefi/nestjs-terra'
 import { ProposalContent } from '../interfaces'
 
 export enum ParameterChangesSubspaces {

@@ -1,5 +1,5 @@
 import { Field, ArgsType } from '@nestjs/graphql'
-import { AccAddress, ValAddress } from 'nestjs-terra'
+import { AccAddress, ValAddress } from '@pulsardefi/nestjs-terra'
 import { GetBaseArgs } from 'src/common/arguments/base.args'
 import { Denom } from 'src/common/enums'
 

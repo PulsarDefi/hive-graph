@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { InjectPinoLogger, PinoLogger } from 'nestjs-pino'
-import { InjectLCDClient, LCDClient } from 'nestjs-terra'
+import { InjectLCDClient, LCDClient } from '@pulsardefi/nestjs-terra'
 import { LCDClientError } from 'src/common/errors'
 import { WasmParams } from 'src/common/models'
 import { CodeInfo, ContractInfo } from './models'
@@ -35,7 +35,7 @@ export class WasmService {
 
       return {
         code_id: info.code_id,
-        address: info.address,
+        address: contractAddress,
         owner: info.creator,
         init_msg: info.init_msg,
         admin: info.admin,
@@ -51,7 +51,7 @@ export class WasmService {
     try {
       const data = await this.lcdService.wasm.contractQuery(contractAddress, query, { height })
       if (data === null) {
-        // some contracts return null responses yikes, terra1spdrct9mwsraqkm5dzrnwjc5ua90xq75t0s8p7 {user: {addr: addr}}  
+        // some contracts return null responses yikes, terra1spdrct9mwsraqkm5dzrnwjc5ua90xq75t0s8p7 {user: {addr: addr}} - classic
         return {}
       } 
       return data
@@ -60,6 +60,10 @@ export class WasmService {
 
       return {"error": (new LCDClientError(err)).toString()}
     }
+  }
+
+  public async smartContractState(contractAddress: string, query: Record<string, any>, height?: number): Promise<any> {
+      return await this.contractQuery(contractAddress, query, height)
   }
 
   public async parameters(height?: number): Promise<WasmParams> {

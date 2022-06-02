@@ -37,6 +37,15 @@ export class WasmResolver {
   ): Promise<any> {
     return this.wasmService.contractQuery(address, qryArgs.query, height)
   }
+  
+  @ResolveField(() => AnythingScalar)
+  public async smartContractState(
+    @Args('contractAddress') address: string,
+    @Args() qryArgs: GetWasmQueryArgs,
+    @Args('height', { nullable: true }) height: number,
+  ): Promise<any> {
+    return this.wasmService.smartContractState(address, qryArgs.query, height)
+  }
 
   @ResolveField(() => WasmParams)
   public async parameters(@Args() args: GetBaseArgs): Promise<WasmParams> {

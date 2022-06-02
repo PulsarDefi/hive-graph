@@ -1,4 +1,4 @@
-import { Proposal as TerraProposal, CommunityPoolSpendProposal, ParameterChangeProposal } from 'nestjs-terra'
+import { Proposal as TerraProposal, CommunityPoolSpendProposal, ParameterChangeProposal } from '@pulsardefi/nestjs-terra'
 import { CommunityPoolSpendContent, ParameterChangeContent, TextContent } from 'src/common/models'
 import { ProposalContentType } from 'src/common/unions'
 

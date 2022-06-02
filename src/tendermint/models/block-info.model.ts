@@ -15,7 +15,7 @@ export class BlockId {
   hash!: string
 
   @Field(() => Parts)
-  parts!: Parts
+  part_set_header!: Parts
 }
 
 @ObjectType()

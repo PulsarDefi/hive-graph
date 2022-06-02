@@ -1,5 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql'
-import { ModeInfo } from 'nestjs-terra'
+import { ModeInfo } from '@pulsardefi/nestjs-terra'
 import { AnythingScalar } from 'src/anything.scalar'
 import { PublicKeyType } from 'src/common/unions'
 

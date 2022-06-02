@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common'
 import axios from 'axios'
 import { InjectPinoLogger, PinoLogger } from 'nestjs-pino'
-import { InjectLCDClient, LCDClient } from 'nestjs-terra'
+import { InjectLCDClient, LCDClient } from '@pulsardefi/nestjs-terra'
 import { LCDClientError } from 'src/common/errors'
 import { TxInfo, TxSearchOptions, TxSearchResult } from './models'
 

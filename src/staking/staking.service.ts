@@ -5,7 +5,7 @@ import {
   InjectLCDClient,
   LCDClient,
   UnbondingDelegation as TerraUnbondingDelegation,
-} from 'nestjs-terra'
+} from '@pulsardefi/nestjs-terra'
 import { LCDClientError } from 'src/common/errors'
 import { Coin, StakingParams, Validator } from 'src/common/models'
 import { Delegation, Redelegation, StakingPool, UnbondingDelegation, UnbondingDelegationEntry } from './models'

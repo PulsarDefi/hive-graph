@@ -5,4 +5,5 @@ import { AnythingScalar } from 'src/anything.scalar'
 export class Wasm {
   @Field(() => AnythingScalar)
   contractQuery!: Promise<any>
+  smartContractState!: Promise<any>
 }

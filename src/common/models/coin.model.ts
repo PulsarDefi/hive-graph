@@ -1,5 +1,5 @@
 import { Field, ObjectType, InputType } from '@nestjs/graphql'
-import { Coins as TerraCoins, Coin as TerraCoin } from 'nestjs-terra'
+import { Coins as TerraCoins, Coin as TerraCoin } from '@pulsardefi/nestjs-terra'
 
 @InputType('CoinInput')
 @ObjectType('Coin')

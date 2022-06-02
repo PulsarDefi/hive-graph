@@ -1,5 +1,5 @@
 import { Field, Int, ObjectType } from '@nestjs/graphql'
-import { Validator as TerraValidator } from 'nestjs-terra'
+import { Validator as TerraValidator } from '@pulsardefi/nestjs-terra'
 import { ValConsPublicKey } from './public-key.model'
 
 @ObjectType()

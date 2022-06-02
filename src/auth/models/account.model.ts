@@ -1,5 +1,5 @@
 import { Field, ObjectType, Int } from '@nestjs/graphql'
-import { AccAddress } from 'nestjs-terra'
+import { AccAddress } from '@pulsardefi/nestjs-terra'
 import { PublicKeyType, PublicKeyUnion } from 'src/common/unions'
 
 @ObjectType()

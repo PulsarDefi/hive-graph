@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { InjectPinoLogger, PinoLogger } from 'nestjs-pino'
-import { Coin as TerraCoin, InjectLCDClient, LCDClient } from 'nestjs-terra'
+import { Coin as TerraCoin, InjectLCDClient, LCDClient } from '@pulsardefi/nestjs-terra'
 import { LCDClientError } from 'src/common/errors'
 import { Coin, Validator } from 'src/common/models'
 import { ValidatorVotingPower } from './models'

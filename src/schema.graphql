@@ -51,7 +51,7 @@ type BlockData {
 
 type BlockId {
   hash: String!
-  parts: Parts!
+  part_set_header: Parts!
 }
 
 type BlockInfo {
@@ -671,6 +671,7 @@ type Wasm {
   contractInfo(contractAddress: String!, height: Float!): ContractInfo!
   contractQuery(contractAddress: String!, height: Float, query: JSON!): Anything!
   parameters(height: Float): WasmParams!
+  smartContractState(contractAddress: String!, height: Float, query: JSON!): Anything!
 }
 
 type WasmParams {

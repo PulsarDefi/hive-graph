@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { InjectPinoLogger, PinoLogger } from 'nestjs-pino'
-import { InjectLCDClient, LCDClient } from 'nestjs-terra'
+import { InjectLCDClient, LCDClient } from '@pulsardefi/nestjs-terra'
 import { LCDClientError } from 'src/common/errors'
 import { NodeInfo, ValidatorSet, BlockInfo, DelegateValidator } from './models'
 import { UtilsService } from 'src/utils/utils.service'
@@ -68,10 +68,10 @@ export class TendermintService {
       const info = await this.lcdService.tendermint.validatorSet(height)
 
       return {
-        block_height: info.block_height,
-        validators: info.validators.map<DelegateValidator>((validator) => ({
+        block_height: height?.toString() || '',
+        validators: info[0].map<DelegateValidator>((validator) => ({
           address: validator.address,
-          pub_key: typeof validator.pub_key === 'string' ? validator.pub_key : validator.pub_key.value,
+          pub_key: typeof validator.pub_key === 'string' ? validator.pub_key : validator.pub_key.key,
           proposer_priority: validator.proposer_priority,
           voting_power: validator.voting_power,
         })),

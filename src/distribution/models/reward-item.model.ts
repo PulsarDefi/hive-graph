@@ -1,5 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql'
-import { ValAddress } from 'nestjs-terra'
+import { ValAddress } from '@pulsardefi/nestjs-terra'
 import { Coin } from 'src/common/models'
 
 @ObjectType()

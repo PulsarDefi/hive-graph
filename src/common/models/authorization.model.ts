@@ -3,7 +3,7 @@ import {
   Authorization as TerraAuthorization,
   SendAuthorization as TerraSendAuthorization,
   GenericAuthorization as TerraGenericAuthorization,
-} from 'nestjs-terra'
+} from '@pulsardefi/nestjs-terra'
 import { Coin } from 'src/common/models'
 
 @ObjectType()

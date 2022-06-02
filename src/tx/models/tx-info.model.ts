@@ -15,7 +15,7 @@ export class TxInfo {
   raw_log?: string
 
   @Field(() => [TxLog], { nullable: true })
-  logs?: TxLog[]
+  logs?: TxLog[] | any
 
   @Field(() => Int)
   gas_wanted!: number
@@ -24,7 +24,7 @@ export class TxInfo {
   gas_used!: number
 
   @Field(() => ProtoTx)
-  tx!: Tx
+  tx!: Tx | any
 
   @Field()
   timestamp!: string
